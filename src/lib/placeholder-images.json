@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "coin1",
+      "description": "An ancient Roman silver denarius.",
+      "imageUrl": "https://images.unsplash.com/photo-1710552516769-f5e0e7aafb9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhbmNpZW50JTIwY29pbnxlbnwwfHx8fDE3NjEwMjkzMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient coin"
+    },
+    {
+      "id": "coin2",
+      "description": "A Greek silver tetradrachm from Athens.",
+      "imageUrl": "https://images.unsplash.com/photo-1744284488493-b33ec24a6886?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncmVlayUyMGNvaW58ZW58MHx8fHwxNzYxMDI5MzA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "greek coin"
+    },
+    {
+      "id": "coin3",
+      "description": "An English gold noble from the 14th century.",
+      "imageUrl": "https://images.unsplash.com/photo-1599038988300-2e3f04d87f8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnb2xkJTIwY29pbnxlbnwwfHx8fDE3NjA5OTAyNDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold coin"
+    },
+    {
+      "id": "coin4",
+      "description": "A Spanish silver 8 reales 'piece of eight'.",
+      "imageUrl": "https://images.unsplash.com/photo-1626679787984-d28b05e9ec4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzaWx2ZXIlMjBjb2lufGVufDB8fHx8MTc2MTAyOTMwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silver coin"
+    },
+    {
+      "id": "coin5",
+      "description": "A Byzantine gold solidus.",
+      "imageUrl": "https://images.unsplash.com/photo-1617004890899-fe6c81fcd36d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxieXphbnRpbmUlMjBjb2lufGVufDB8fHx8MTc2MTAyOTMwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "byzantine coin"
+    },
+    {
+      "id": "coin6",
+      "description": "A Japanese koban oval gold coin.",
+      "imageUrl": "https://images.unsplash.com/photo-1726820433545-71716634b01e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxqYXBhbmVzZSUyMGNvaW58ZW58MHx8fHwxNzYxMDI5MzA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "japanese coin"
+    },
+    {
+      "id": "coin-upload-placeholder",
+      "description": "Placeholder for uploaded coin image.",
+      "imageUrl": "https://images.unsplash.com/photo-1484069560501-87d72b0c3669?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxxdWVzdGlvbiUyMG1hcmt8ZW58MHx8fHwxNzYwOTY5NDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "question mark"
+    },
+    {
+      "id": "hero-image",
+      "description": "A magnifying glass inspecting an old coin.",
+      "imageUrl": "https://images.unsplash.com/photo-1715962303808-8ce151221e6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWduaWZ5aW5nJTIwZ2xhc3MlMjBjb2lufGVufDB8fHx8MTc2MTAyOTMwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magnifying glass coin"
+    }
+  ]
 }
