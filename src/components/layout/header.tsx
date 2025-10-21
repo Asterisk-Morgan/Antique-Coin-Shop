@@ -1,10 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Coins, Menu, Search, ShoppingCart, User } from "lucide-react";
+import { Coins, Menu, ShoppingCart, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { useCart } from "@/hooks/use-cart";
 import { CartSheet } from "@/components/cart/cart-sheet";
 
@@ -29,7 +34,7 @@ export function Header() {
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -43,17 +48,16 @@ export function Header() {
 
         <Sheet>
           <SheetTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-            >
+            <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
               <span className="sr-only">Toggle Menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col gap-4">
+            <SheetHeader>
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+            </SheetHeader>
+            <nav className="flex flex-col gap-4 mt-4">
               <Link href="/" className="flex items-center space-x-2 mb-4">
                 <Coins className="h-6 w-6 text-primary" />
                 <span className="font-bold font-headline">CoinCollect</span>
@@ -75,15 +79,15 @@ export function Header() {
           <div className="flex-1" />
           <nav className="flex items-center space-x-2">
             <CartSheet>
-                <Button variant="ghost" size="icon" className="relative">
-                  <ShoppingCart className="h-5 w-5" />
-                  {cartCount > 0 && (
-                    <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs">
-                      {cartCount}
-                    </span>
-                  )}
-                  <span className="sr-only">Shopping Cart</span>
-                </Button>
+              <Button variant="ghost" size="icon" className="relative">
+                <ShoppingCart className="h-5 w-5" />
+                {cartCount > 0 && (
+                  <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs">
+                    {cartCount}
+                  </span>
+                )}
+                <span className="sr-only">Shopping Cart</span>
+              </Button>
             </CartSheet>
 
             <Button variant="ghost" size="icon" asChild>
