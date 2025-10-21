@@ -3,14 +3,14 @@ import { DollarSign, Package, ShoppingCart } from "lucide-react";
 
 export default function AdminDashboardPage() {
   const stats = [
-    { title: "Total Revenue", value: "$45,231.89", icon: DollarSign, change: "+20.1% from last month" },
-    { title: "Orders", value: "+2350", icon: ShoppingCart, change: "+180.1% from last month" },
-    { title: "Products", value: "6", icon: Package, change: "Total products in catalog" },
+    { title: "総収益", value: "$45,231.89", icon: DollarSign, change: "先月比20.1%増" },
+    { title: "注文数", value: "+2350", icon: ShoppingCart, change: "先月比180.1%増" },
+    { title: "製品数", value: "6", icon: Package, change: "カタログ内の全製品" },
   ];
 
   return (
     <div>
-      <h1 className="text-2xl font-bold font-headline mb-4">Dashboard</h1>
+      <h1 className="text-2xl font-bold font-headline mb-4">ダッシュボード</h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {stats.map((stat) => (
           <Card key={stat.title}>
@@ -28,10 +28,10 @@ export default function AdminDashboardPage() {
        <div className="mt-8">
         <Card>
           <CardHeader>
-            <CardTitle>Recent Orders</CardTitle>
+            <CardTitle>最近の注文</CardTitle>
           </CardHeader>
           <CardContent>
-             <p className="text-muted-foreground">No recent orders to display.</p>
+             <p className="text-muted-foreground">表示する最近の注文はありません。</p>
           </CardContent>
         </Card>
       </div>

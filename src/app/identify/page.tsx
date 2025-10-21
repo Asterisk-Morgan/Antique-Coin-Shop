@@ -12,10 +12,9 @@ export default function IdentifyCoinPage() {
     <div className="container mx-auto px-4 py-8">
       <Card className="max-w-2xl mx-auto bg-card/80 backdrop-blur-sm">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl font-headline">AI Coin Identifier</CardTitle>
+          <CardTitle className="text-3xl font-headline">AIコイン識別</CardTitle>
           <CardDescription>
-            Have a mysterious coin? Upload a photo and our AI will attempt to
-            identify it for you.
+            謎のコインをお持ちですか？写真をアップロードすると、AIが識別を試みます。
           </CardDescription>
         </CardHeader>
         <CardContent>

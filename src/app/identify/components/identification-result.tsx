@@ -18,35 +18,35 @@ export function IdentificationResult({ result, imagePreviewUrl, onReset }: Ident
   return (
     <div className="space-y-6">
       <div className="relative w-full h-64 rounded-lg overflow-hidden border shadow-inner">
-        <Image src={imagePreviewUrl} alt="Identified Coin" fill className="object-contain p-2" />
+        <Image src={imagePreviewUrl} alt="識別されたコイン" fill className="object-contain p-2" />
       </div>
 
       {!identification.isCoin ? (
         <Card>
           <CardHeader>
-            <CardTitle className="font-headline text-2xl">Could Not Identify a Coin</CardTitle>
+            <CardTitle className="font-headline text-2xl">コインを識別できませんでした</CardTitle>
             <CardDescription>
-              Our AI could not detect a coin in the image provided. Please try again with a clearer picture.
+              AIは提供された画像からコインを検出できませんでした。より鮮明な画像で再度お試しください。
             </CardDescription>
           </CardHeader>
         </Card>
       ) : (
         <Card>
           <CardHeader>
-            <CardTitle className="font-headline text-2xl">Identification Results</CardTitle>
+            <CardTitle className="font-headline text-2xl">識別結果</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                 <div className="space-y-1">
-                    <p className="text-muted-foreground">Origin</p>
+                    <p className="text-muted-foreground">起源</p>
                     <p className="font-semibold">{identification.origin}</p>
                 </div>
                 <div className="space-y-1">
-                    <p className="text-muted-foreground">Historical Period</p>
+                    <p className="text-muted-foreground">時代</p>
                     <p className="font-semibold">{identification.historicalPeriod}</p>
                 </div>
                  <div className="space-y-1 col-span-full">
-                    <p className="text-muted-foreground">Estimated Value</p>
+                    <p className="text-muted-foreground">推定価値</p>
                     <p className="font-semibold">{identification.estimatedValue}</p>
                 </div>
             </div>
@@ -54,7 +54,7 @@ export function IdentificationResult({ result, imagePreviewUrl, onReset }: Ident
             <Separator />
             
             <div>
-              <h3 className="font-semibold mb-2">Description</h3>
+              <h3 className="font-semibold mb-2">説明</h3>
               <p className="text-foreground/80 leading-relaxed">{description}</p>
             </div>
           </CardContent>
@@ -62,7 +62,7 @@ export function IdentificationResult({ result, imagePreviewUrl, onReset }: Ident
       )}
 
       <Button onClick={onReset} variant="outline" className="w-full">
-        Identify Another Coin
+        別のコインを識別
       </Button>
     </div>
   );

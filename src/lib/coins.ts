@@ -3,55 +3,55 @@ import type { Coin } from './types';
 export const coins: Coin[] = [
   {
     id: '1',
-    name: 'Roman Denarius',
+    name: 'ローマ デナリウス',
     year: 'c. 117-138 AD',
-    origin: 'Roman Empire',
-    description: 'A silver denarius from the reign of Emperor Hadrian, featuring a portrait of the emperor on the obverse and a depiction of a galley on the reverse. A fine example of Roman Imperial coinage.',
+    origin: 'ローマ帝国',
+    description: 'ハドリアヌス帝の治世の銀貨デナリウス。表面には皇帝の肖像、裏面にはガレー船が描かれています。ローマ帝国の貨幣の素晴らしい例です。',
     price: 150.00,
     imageId: 'coin1'
   },
   {
     id: '2',
-    name: 'Athenian Tetradrachm',
+    name: 'アテネ テトラドラクマ',
     year: 'c. 449-413 BC',
-    origin: 'Ancient Greece, Athens',
-    description: 'Classic "Owl" tetradrachm of Athens. This iconic silver coin features the helmeted head of Athena on the obverse and her sacred owl on the reverse. A symbol of Athenian wisdom and power.',
+    origin: '古代ギリシャ、アテネ',
+    description: 'アテネの古典的な「フクロウ」テトラドラクマ。この象徴的な銀貨は、表面にアテナの兜をかぶった頭部、裏面には聖なるフクロウが描かれています。アテネの知恵と力の象徴です。',
     price: 850.00,
     imageId: 'coin2'
   },
   {
     id: '3',
-    name: 'English Gold Noble',
+    name: 'イングランド金貨ノーブル',
     year: 'c. 1361-1369 AD',
-    origin: 'Kingdom of England',
-    description: 'A beautiful gold noble from the reign of Edward III. The obverse depicts the king in a ship, holding a sword and shield. It represents the pinnacle of medieval English minting.',
+    origin: 'イングランド王国',
+    description: 'エドワード3世の治世の美しい金貨ノーブル。表面には剣と盾を持った船上の王が描かれています。中世イングランドの鋳造技術の頂点を表しています。',
     price: 3200.00,
     imageId: 'coin3'
   },
   {
     id: '4',
-    name: 'Spanish Piece of Eight',
+    name: 'スペイン 8レアル銀貨',
     year: 'c. 1772-1783 AD',
-    origin: 'Spanish Empire',
-    description: 'A silver 8 reales, famously known as a "piece of eight." Minted under Charles III. This coin was a global currency for centuries and is often associated with pirate lore.',
+    origin: 'スペイン帝国',
+    description: '「8レアル銀貨」として有名な銀貨。チャールズ3世の下で鋳造されました。このコインは何世紀にもわたって世界通貨として流通し、海賊の伝説と関連付けられることが多いです。',
     price: 275.00,
     imageId: 'coin4'
   },
   {
     id: '5',
-    name: 'Byzantine Solidus',
+    name: 'ビザンチン ソリドゥス',
     year: 'c. 976-1025 AD',
-    origin: 'Byzantine Empire',
-    description: 'A gold solidus of Emperor Basil II. The coin shows a facing bust of Christ Pantocrator on the obverse and the crowned figures of Basil II and his brother Constantine VIII on the reverse.',
+    origin: 'ビザンチン帝国',
+    description: 'バシレイオス2世皇帝の金貨ソリドゥス。表面にはキリスト・パントクラトールの正面胸像、裏面にはバシレイオス2世と弟コンスタンティノス8世の冠を戴いた姿が描かれています。',
     price: 950.00,
     imageId: 'coin5'
   },
   {
     id: '6',
-    name: 'Japanese Koban',
+    name: '日本 小判',
     year: 'c. 1860-1867',
-    origin: 'Japan, Edo Period',
-    description: 'A Man\'en koban, a distinctive oval-shaped gold coin from the late Edo period. Stamped with characters indicating its value and the mint master\'s seal.',
+    origin: '日本、江戸時代',
+    description: '江戸時代後期の独特な楕円形の金貨、万延小判。価値を示す文字と鋳造師の印が刻印されています。',
     price: 1800.00,
     imageId: 'coin6'
   },

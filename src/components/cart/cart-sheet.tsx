@@ -33,7 +33,7 @@ export function CartSheet({ children }: { children: React.ReactNode }) {
           {cartItems.length > 0 ? (
             <div className="space-y-4">
               {cartItems.map(({ coin, quantity }) => {
-                const imageUrl = coin.imageUrl || getPlaceholderImageById("coin-placeholder").imageUrl;
+                const imageUrl = getPlaceholderImageById(coin.imageId)?.imageUrl || getPlaceholderImageById("coin-placeholder")?.imageUrl || '';
                 return (
                   <div key={coin.id} className="flex items-center gap-4">
                     <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border">

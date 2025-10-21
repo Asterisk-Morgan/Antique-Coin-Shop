@@ -20,8 +20,8 @@ export function AddToCartButton({ coin }: AddToCartButtonProps) {
     startTransition(() => {
       addToCart(coin);
       toast({
-        title: "Added to Cart",
-        description: `${coin.name} has been added to your cart.`,
+        title: "カートに追加しました",
+        description: `${coin.name}がカートに追加されました。`,
       });
     });
   };

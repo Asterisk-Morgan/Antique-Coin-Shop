@@ -25,20 +25,20 @@ export default function AdminProductsPage() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="font-headline">Products</CardTitle>
+        <CardTitle className="font-headline">製品</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead className="hidden w-[100px] sm:table-cell">
-                <span className="sr-only">Image</span>
+                <span className="sr-only">画像</span>
               </TableHead>
-              <TableHead>Name</TableHead>
-              <TableHead>Origin</TableHead>
-              <TableHead className="hidden md:table-cell">Price</TableHead>
+              <TableHead>名前</TableHead>
+              <TableHead>原産地</TableHead>
+              <TableHead className="hidden md:table-cell">価格</TableHead>
               <TableHead>
-                <span className="sr-only">Actions</span>
+                <span className="sr-only">アクション</span>
               </TableHead>
             </TableRow>
           </TableHeader>
@@ -74,13 +74,13 @@ export default function AdminProductsPage() {
                           variant="ghost"
                         >
                           <MoreHorizontal className="h-4 w-4" />
-                          <span className="sr-only">Toggle menu</span>
+                          <span className="sr-only">メニューを切り替える</span>
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuItem>Edit</DropdownMenuItem>
-                        <DropdownMenuItem>Delete</DropdownMenuItem>
+                        <DropdownMenuLabel>アクション</DropdownMenuLabel>
+                        <DropdownMenuItem>編集</DropdownMenuItem>
+                        <DropdownMenuItem>削除</DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </TableCell>

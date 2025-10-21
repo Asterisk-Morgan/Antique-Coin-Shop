@@ -17,8 +17,8 @@ export default function CheckoutPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: 'Order Placed!',
-      description: 'Thank you for your purchase. Your order is being processed.',
+      title: '注文完了！',
+      description: 'ご購入ありがとうございます。ご注文は処理中です。',
     });
     clearCart();
     router.push('/');
@@ -27,10 +27,10 @@ export default function CheckoutPage() {
   if (cartItems.length === 0) {
     return (
       <div className="container mx-auto px-4 py-8 text-center">
-        <h1 className="text-2xl font-semibold">Your cart is empty.</h1>
-        <p className="text-muted-foreground">Please add items to your cart before checking out.</p>
+        <h1 className="text-2xl font-semibold">カートは空です。</h1>
+        <p className="text-muted-foreground">チェックアウトする前に、カートに商品を追加してください。</p>
         <Button onClick={() => router.push('/')} className="mt-4">
-          Continue Shopping
+          買い物を続ける
         </Button>
       </div>
     );
@@ -38,52 +38,52 @@ export default function CheckoutPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold font-headline mb-8 text-center">Checkout</h1>
+      <h1 className="text-3xl font-bold font-headline mb-8 text-center">チェックアウト</h1>
       <form onSubmit={handleSubmit} className="grid lg:grid-cols-3 gap-8 items-start">
         <div className="lg:col-span-2 space-y-8">
           <Card>
             <CardHeader>
-              <CardTitle>Shipping Information</CardTitle>
+              <CardTitle>配送先情報</CardTitle>
             </CardHeader>
             <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="sm:col-span-2 space-y-2">
-                <Label htmlFor="name">Full Name</Label>
+                <Label htmlFor="name">氏名</Label>
                 <Input id="name" required />
               </div>
               <div className="sm:col-span-2 space-y-2">
-                <Label htmlFor="address">Address</Label>
+                <Label htmlFor="address">住所</Label>
                 <Input id="address" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="city">City</Label>
+                <Label htmlFor="city">市区町村</Label>
                 <Input id="city" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="state">State / Province</Label>
+                <Label htmlFor="state">都道府県</Label>
                 <Input id="state" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="zip">ZIP / Postal Code</Label>
+                <Label htmlFor="zip">郵便番号</Label>
                 <Input id="zip" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="country">Country</Label>
+                <Label htmlFor="country">国</Label>
                 <Input id="country" required />
               </div>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Payment Details</CardTitle>
+              <CardTitle>支払い詳細</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="card-number">Card Number</Label>
+                <Label htmlFor="card-number">カード番号</Label>
                 <Input id="card-number" placeholder="•••• •••• •••• ••••" required />
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="space-y-2 col-span-2">
-                  <Label htmlFor="expiry-date">Expiry Date</Label>
+                  <Label htmlFor="expiry-date">有効期限</Label>
                   <Input id="expiry-date" placeholder="MM / YY" required />
                 </div>
                 <div className="space-y-2">
@@ -96,7 +96,7 @@ export default function CheckoutPage() {
         </div>
         <Card className="sticky top-24">
           <CardHeader>
-            <CardTitle>Order Summary</CardTitle>
+            <CardTitle>注文概要</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             {cartItems.map(({ coin, quantity }) => (
@@ -107,11 +107,11 @@ export default function CheckoutPage() {
             ))}
             <Separator />
             <div className="flex justify-between font-bold text-lg">
-              <span>Total</span>
+              <span>合計</span>
               <span>${cartTotal.toFixed(2)}</span>
             </div>
             <Button type="submit" className="w-full mt-4">
-              Place Order
+              注文を確定する
             </Button>
           </CardContent>
         </Card>

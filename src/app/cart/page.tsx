@@ -15,7 +15,7 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold font-headline mb-8">Your Shopping Cart</h1>
+      <h1 className="text-3xl font-bold font-headline mb-8">ショッピングカート</h1>
       {cartItems.length > 0 ? (
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           <div className="lg:col-span-2 space-y-4">
@@ -50,46 +50,46 @@ export default function CartPage() {
                   <div className="text-right">
                     <p className="font-semibold">${(coin.price * quantity).toFixed(2)}</p>
                     <Button variant="ghost" size="sm" onClick={() => removeFromCart(coin.id)} className="text-muted-foreground hover:text-destructive mt-2">
-                      <Trash2 className="h-4 w-4 mr-1" /> Remove
+                      <Trash2 className="h-4 w-4 mr-1" /> 削除
                     </Button>
                   </div>
                 </Card>
               );
             })}
              <Button variant="outline" onClick={clearCart} className="mt-4">
-              Clear Cart
+              カートをクリア
             </Button>
           </div>
           <Card className="sticky top-24">
             <CardHeader>
-              <CardTitle className="font-headline">Order Summary</CardTitle>
+              <CardTitle className="font-headline">注文概要</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex justify-between">
-                <span>Subtotal ({cartCount} items)</span>
+                <span>小計 ({cartCount}点)</span>
                 <span>${cartTotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
-                <span>Shipping</span>
-                <span>FREE</span>
+                <span>送料</span>
+                <span>無料</span>
               </div>
               <Separator />
               <div className="flex justify-between font-bold text-lg">
-                <span>Total</span>
+                <span>合計</span>
                 <span>${cartTotal.toFixed(2)}</span>
               </div>
               <Button asChild className="w-full mt-4">
-                <Link href="/checkout">Proceed to Checkout</Link>
+                <Link href="/checkout">レジに進む</Link>
               </Button>
             </CardContent>
           </Card>
         </div>
       ) : (
         <div className="text-center py-16 border border-dashed rounded-lg">
-          <h2 className="text-xl font-semibold">Your cart is empty</h2>
-          <p className="text-muted-foreground mt-2">Looks like you haven't added any coins yet.</p>
+          <h2 className="text-xl font-semibold">カートは空です</h2>
+          <p className="text-muted-foreground mt-2">まだコインを追加していないようです。</p>
           <Button asChild className="mt-6">
-            <Link href="/">Explore Collection</Link>
+            <Link href="/">コレクションを見る</Link>
           </Button>
         </div>
       )}

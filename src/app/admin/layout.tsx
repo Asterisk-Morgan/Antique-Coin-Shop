@@ -10,24 +10,24 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     <SidebarHeader>
                         <div className="flex items-center gap-2 p-2">
                             <Coins className="text-primary size-7" />
-                            <h2 className="text-lg font-headline font-semibold group-data-[collapsible=icon]:hidden">CoinCollect Admin</h2>
+                            <h2 className="text-lg font-headline font-semibold group-data-[collapsible=icon]:hidden">CoinCollect 管理</h2>
                         </div>
                     </SidebarHeader>
                     <SidebarContent>
                         <SidebarMenu>
                             <SidebarMenuItem>
-                                <SidebarMenuButton asChild tooltip="Dashboard">
-                                    <Link href="/admin/dashboard"><LayoutDashboard /> <span className="group-data-[collapsible=icon]:hidden">Dashboard</span></Link>
+                                <SidebarMenuButton asChild tooltip="ダッシュボード">
+                                    <Link href="/admin/dashboard"><LayoutDashboard /> <span className="group-data-[collapsible=icon]:hidden">ダッシュボード</span></Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                              <SidebarMenuItem>
-                                <SidebarMenuButton asChild tooltip="Products">
-                                    <Link href="/admin/products"><Package /> <span className="group-data-[collapsible=icon]:hidden">Products</span></Link>
+                                <SidebarMenuButton asChild tooltip="製品">
+                                    <Link href="/admin/products"><Package /> <span className="group-data-[collapsible=icon]:hidden">製品</span></Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                              <SidebarMenuItem>
-                                <SidebarMenuButton asChild tooltip="Orders">
-                                    <Link href="/admin/orders"><ShoppingCart /> <span className="group-data-[collapsible=icon]:hidden">Orders</span></Link>
+                                <SidebarMenuButton asChild tooltip="注文">
+                                    <Link href="/admin/orders"><ShoppingCart /> <span className="group-data-[collapsible=icon]:hidden">注文</span></Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                         </SidebarMenu>
@@ -35,8 +35,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     <SidebarFooter>
                          <SidebarMenu>
                              <SidebarMenuItem>
-                                <SidebarMenuButton asChild tooltip="Main Site">
-                                    <Link href="/"><Home /> <span className="group-data-[collapsible=icon]:hidden">Back to Site</span></Link>
+                                <SidebarMenuButton asChild tooltip="メインサイト">
+                                    <Link href="/"><Home /> <span className="group-data-[collapsible=icon]:hidden">サイトに戻る</span></Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                          </SidebarMenu>

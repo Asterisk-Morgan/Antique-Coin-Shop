@@ -44,8 +44,8 @@ export function ImageUploadForm() {
     if (!photoDataUri) {
       toast({
         variant: "destructive",
-        title: "No photo selected",
-        description: "Please choose a photo of your coin to identify.",
+        title: "写真が選択されていません",
+        description: "識別するコインの写真を選択してください。",
       });
       return;
     }
@@ -65,8 +65,8 @@ export function ImageUploadForm() {
       setStatus("error");
       toast({
         variant: "destructive",
-        title: "Identification Failed",
-        description: "There was an error identifying your coin. Please try again.",
+        title: "識別できませんでした",
+        description: "コインの識別中にエラーが発生しました。もう一度お試しください。",
       });
     }
   };
@@ -85,12 +85,12 @@ export function ImageUploadForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-2">
-        <Label htmlFor="coin-photo">Coin Photo</Label>
+        <Label htmlFor="coin-photo">コインの写真</Label>
         <div className="relative flex justify-center items-center w-full h-64 border-2 border-dashed border-border rounded-lg bg-background/50">
           {previewUrl ? (
             <Image
               src={previewUrl}
-              alt="Coin preview"
+              alt="コインのプレビュー"
               fill
               className="object-contain rounded-lg p-2"
             />
@@ -114,7 +114,7 @@ export function ImageUploadForm() {
           {!previewUrl && (
             <div className="text-center text-muted-foreground pointer-events-none">
               <Upload className="mx-auto h-12 w-12" />
-              <p>Click or drag file to this area to upload</p>
+              <p>クリックまたはドラッグしてファイルをアップロード</p>
             </div>
           )}
         </div>
@@ -123,10 +123,10 @@ export function ImageUploadForm() {
         {status === "loading" ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Identifying...
+            識別中...
           </>
         ) : (
-          "Identify Coin"
+          "コインを識別"
         )}
       </Button>
     </form>
