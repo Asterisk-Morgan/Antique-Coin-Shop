@@ -6,8 +6,8 @@ import { Footer } from '@/components/layout/footer';
 import { CartProvider } from '@/context/cart-context';
 
 export const metadata: Metadata = {
-  title: 'CoinCollect',
-  description: 'Discover and collect antique coins from around the world.',
+  title: 'コインコレクト',
+  description: '世界中のアンティークコインを発見し、収集しましょう。',
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

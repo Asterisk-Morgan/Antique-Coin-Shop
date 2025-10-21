@@ -21,18 +21,18 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-0 left-0 p-8 text-white">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 drop-shadow-lg">A Collector's Treasury</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 drop-shadow-lg">コレクターの宝物</h1>
           <p className="max-w-xl text-lg mb-6 drop-shadow-md">
-            Journey through time with our curated collection of rare and historical coins. Each piece tells a story.
+            希少で歴史的なコインの厳選されたコレクションで、時を超えた旅に出かけましょう。一つ一つのコインが物語を語ります。
           </p>
           <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-            <Link href="/identify">Identify a Coin</Link>
+            <Link href="/identify">コインを特定する</Link>
           </Button>
         </div>
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold font-headline text-center mb-8">Our Collection</h2>
+        <h2 className="text-3xl font-bold font-headline text-center mb-8">私たちのコレクション</h2>
         <CoinList />
       </section>
     </div>

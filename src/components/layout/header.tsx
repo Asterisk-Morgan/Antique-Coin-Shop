@@ -17,10 +17,10 @@ export function Header() {
   const { cartCount } = useCart();
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/identify", label: "AI Identifier" },
-    { href: "/#collection", label: "Collection" },
-    { href: "/admin", label: "Admin" },
+    { href: "/", label: "ホーム" },
+    { href: "/identify", label: "AI鑑定" },
+    { href: "/#collection", label: "コレクション" },
+    { href: "/admin", label: "管理者" },
   ];
 
   return (
@@ -50,12 +50,12 @@ export function Header() {
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle Menu</span>
+              <span className="sr-only">メニューを開閉</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="w-[300px] sm:w-[400px]">
             <SheetHeader>
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetTitle className="sr-only">ナビゲーションメニュー</SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-4 mt-4">
               <Link href="/" className="flex items-center space-x-2 mb-4">
@@ -86,14 +86,14 @@ export function Header() {
                     {cartCount}
                   </span>
                 )}
-                <span className="sr-only">Shopping Cart</span>
+                <span className="sr-only">ショッピングカート</span>
               </Button>
             </CartSheet>
 
             <Button variant="ghost" size="icon" asChild>
               <Link href="/login">
                 <User className="h-5 w-5" />
-                <span className="sr-only">User Account</span>
+                <span className="sr-only">ユーザーアカウント</span>
               </Link>
             </Button>
           </nav>

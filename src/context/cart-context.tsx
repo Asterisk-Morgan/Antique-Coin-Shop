@@ -2,7 +2,6 @@
 
 import React, { createContext, useState, ReactNode } from 'react';
 import type { CartItem, Coin } from '@/lib/types';
-import { useToast } from "@/hooks/use-toast";
 
 export interface CartContextType {
   cartItems: CartItem[];
@@ -18,7 +17,6 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const { toast } = useToast();
 
   const addToCart = (coin: Coin) => {
     setCartItems(prevItems => {
@@ -29,10 +27,6 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         );
       }
       return [...prevItems, { coin, quantity: 1 }];
-    });
-    toast({
-      title: "Added to Cart",
-      description: `${coin.name} has been added to your cart.`,
     });
   };
 

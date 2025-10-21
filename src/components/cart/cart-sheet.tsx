@@ -24,99 +24,86 @@ export function CartSheet({ children }: { children: React.ReactNode }) {
 
   return (
     <Sheet>
-      <SheetTrigger asChild>{children}</SheetTrigger>
+      {children}
       <SheetContent className="flex flex-col">
         <SheetHeader>
-          <SheetTitle className="font-headline">Shopping Cart ({cartCount})</SheetTitle>
+          <SheetTitle className="font-headline">ショッピングカート ({cartCount})</SheetTitle>
         </SheetHeader>
-        <Separator />
-        {cartItems.length > 0 ? (
-          <>
-            <ScrollArea className="flex-grow">
-              <div className="flex flex-col gap-4 py-4">
-                {cartItems.map(({ coin, quantity }) => {
-                   const image = getPlaceholderImageById(coin.imageId);
-                   return (
-                  <div key={coin.id} className="flex items-start gap-4">
-                    <div className="relative h-20 w-20 rounded-md overflow-hidden flex-shrink-0">
-                      {image && (
-                         <Image
-                          src={image.imageUrl}
-                          alt={coin.name}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={image.imageHint}
-                        />
-                      )}
+        <div className="flex-1 overflow-y-auto py-4">
+          {cartItems.length > 0 ? (
+            <div className="space-y-4">
+              {cartItems.map(({ coin, quantity }) => {
+                const imageUrl = coin.imageUrl || getPlaceholderImageById("coin-placeholder").imageUrl;
+                return (
+                  <div key={coin.id} className="flex items-center gap-4">
+                    <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border">
+                      <Image
+                        src={imageUrl}
+                        alt={coin.name}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <div className="flex-grow">
-                      <p className="font-semibold">{coin.name}</p>
+                    <div className="flex-1">
+                      <h3 className="font-medium">{coin.name}</h3>
                       <p className="text-sm text-muted-foreground">${coin.price.toFixed(2)}</p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-6 w-6"
-                          onClick={() => updateQuantity(coin.id, quantity - 1)}
-                        >
-                          <Minus className="h-4 w-4" />
-                        </Button>
-                        <Input
-                          type="number"
-                          value={quantity}
-                          onChange={(e) => updateQuantity(coin.id, parseInt(e.target.value) || 1)}
-                          className="h-6 w-12 text-center"
-                        />
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-6 w-6"
-                          onClick={() => updateQuantity(coin.id, quantity + 1)}
-                        >
-                          <Plus className="h-4 w-4" />
-                        </Button>
-                      </div>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => removeFromCart(coin.id)}
-                    >
-                      <Trash2 className="h-4 w-4 text-muted-foreground" />
-                    </Button>
+                    <div className="flex items-center gap-2">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-8 w-8"
+                        onClick={() => updateQuantity(coin.id, quantity - 1)}
+                        disabled={quantity === 1}
+                      >
+                        -
+                      </Button>
+                      <span>{quantity}</span>
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-8 w-8"
+                        onClick={() => updateQuantity(coin.id, quantity + 1)}
+                      >
+                        +
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="text-muted-foreground hover:text-destructive"
+                        onClick={() => removeFromCart(coin.id)}
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
-                )})}
-              </div>
-            </ScrollArea>
-            <Separator />
-            <SheetFooter className="mt-4">
-              <div className="w-full space-y-4">
-                <div className="flex justify-between font-bold text-lg">
-                  <span>Total</span>
-                  <span>${cartTotal.toFixed(2)}</span>
-                </div>
-                 <SheetClose asChild>
-                    <Button asChild className="w-full">
-                      <Link href="/checkout">Proceed to Checkout</Link>
-                    </Button>
-                </SheetClose>
-                 <SheetClose asChild>
-                    <Button asChild variant="outline" className="w-full">
-                      <Link href="/cart">View Cart</Link>
-                    </Button>
-                </SheetClose>
-              </div>
-            </SheetFooter>
-          </>
-        ) : (
-          <div className="flex-grow flex flex-col items-center justify-center text-center">
-            <p className="text-lg font-semibold">Your cart is empty</p>
-            <p className="text-muted-foreground">Add some coins to get started.</p>
-            <SheetClose asChild>
-                <Button asChild className="mt-4">
-                    <Link href="/">Continue Shopping</Link>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="flex h-full items-center justify-center">
+              <p className="text-lg font-semibold">カートは空です</p>
+            </div>
+          )}
+        </div>
+        {cartItems.length > 0 && (
+          <div className="border-t pt-4">
+            <div className="mb-4 flex justify-between text-base font-medium">
+              <span>合計</span>
+              <span>${cartTotal.toFixed(2)}</span>
+            </div>
+            <SheetFooter>
+              <SheetClose asChild>
+                <Button asChild className="w-full">
+                  <Link href="/cart">カートを見る</Link>
                 </Button>
-            </SheetClose>
+              </SheetClose>
+              <SheetClose asChild>
+                <Button asChild className="w-full">
+                  <Link href="/checkout">チェックアウト</Link>
+                </Button>
+              </SheetClose>
+            </SheetFooter>
           </div>
         )}
       </SheetContent>
